@@ -11,7 +11,7 @@ Acesse este link para _[Instalar o WSL](https://docs.microsoft.com/pt-br/windows
 
 ## ZSH
 
-• Instale o Zsh: `sudo apt install zsh`<br>
+• Instale o Zsh: `sudo apt zsh`<br>
 • Defina o Zsh como padrão: `chsh -s $(which zsh)`
 
 ## OH-MY-ZSH
