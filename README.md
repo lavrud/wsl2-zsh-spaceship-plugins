@@ -49,3 +49,12 @@ _[https://github.com/zdharma-continuum/zinit](https://github.com/zdharma-continu
 `zinit light zdharma/fast-syntax-highlighting`<br>
 `zinit light zsh-users/zsh-autosuggestions`<br>
 `zinit light zsh-users/zsh-completions`
+
+## Troubleshooting: falha ao clonar plugins (DNS)
+
+Se o `zinit light` (ou qualquer `git clone` para o GitHub) falhar com `Could not resolve host: github.com`, o WSL não está resolvendo DNS no momento em que o shell inicia.
+
+• Teste a resolução: `getent hosts github.com`<br>
+• Teste o acesso real: `git ls-remote https://github.com/<usuario>/<repo>.git HEAD`<br>
+• Se ambos funcionarem, basta rodar novamente os comandos `zinit light ...` (ou abrir um novo terminal) para completar a instalação<br>
+• Se a rede seguir indisponível, confira `/etc/resolv.conf` e o modo de rede do WSL (`.wslconfig`)
